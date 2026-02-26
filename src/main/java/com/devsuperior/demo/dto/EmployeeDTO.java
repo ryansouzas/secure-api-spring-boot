@@ -1,12 +1,22 @@
 package com.devsuperior.demo.dto;
 
 import com.devsuperior.demo.entities.Employee;
+import jakarta.validation.constraints.Email;
+import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.NotNull;
 
 public class EmployeeDTO {
 	
 	private Long id;
+
+    @NotBlank(message = "Name is required")
 	private String name;
-	private String email;
+
+    @NotBlank(message = "Email is required")
+	@Email(message = "Email must be a valid address")
+    private String email;
+
+    @NotNull(message = "Department is required")
 	private Long departmentId;
 	
 	public EmployeeDTO() {
