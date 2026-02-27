@@ -9,14 +9,14 @@ public class EmployeeDTO {
 	
 	private Long id;
 
-    @NotBlank(message = "Name is required")
+    @NotBlank(message = "Campo requerido")
 	private String name;
 
-    @NotBlank(message = "Email is required")
-	@Email(message = "Email must be a valid address")
+    @NotBlank(message = "Email requerido")
+	@Email(message = "Email inválido")
     private String email;
 
-    @NotNull(message = "Department is required")
+    @NotNull(message = "Campo requerido")
 	private Long departmentId;
 	
 	public EmployeeDTO() {
